@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.666);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.audio{
+    height: 18%;
+    width: 68%;
+    /* margin-right: 10px; */
+    background-color: white;
+    border-radius: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.681);
+}
+.left{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
+.audio:hover{
+    background-color: rgb(255, 113, 153);
+    color: white;
+}
+.logo{
+    margin:1rem;
+    font-family: 'borel', cursive;
+    font-size: 2rem;
+    text-shadow: 0px 0px 20px rgba(134, 241, 255, 0.726);
+}
+.logo img{
+    height: 40px;
+    margin-right: 0.8rem;
+    margin-top: 1.2rem;
+    transform: translate(0,15%);
+}
+.body{
+    background: url("bg.jpg"); 
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width:100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#scoreBox{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    margin-top: 30px;
+    background-color: rgba(8, 22, 59, 0.738);
+    width: 70vmin;
+    height: 70vmin;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    box-shadow: 0px 0px 10px rgba(0, 22, 71, 0.702);
+}
+
+.head{
+    background-color:rgb(90, 183, 255);
+    transform: scale(1.0);
+    margin:2px;
+}
+
+.snake{
+    background-color:rgb(63, 202, 233);
+    margin: 2px;
+}
+
+.food{
+    background-color: red;
+    margin: 2px;
+}
+.width{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.buttons{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+@media(max-width:726px)
+{
+    .logo{
+        font-size: 1.5rem;
+    }
+    .left{
+        display: none;
+    }
+    .width{
+        margin-top: 1%;
+        display: flex;
+        font-size: 1.5rem;
+    }
+    #scoreBox{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+    }
+
+    #hiscoreBox{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+    }
+    .audio{
+        margin-left: 10px;
+        height: 10%;
+        width: 30%;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:300px)
+{
+    .width{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 0.5rem;
+    }
+    .audio{
+        margin-left: 10px;
+        height: 15%;
+        width: 20%;
+        font-size: 0.4rem;
+    }
+}
+@media (max-width:200px)
+{
+    .audio{
+        display: none;
+    }
+}
